@@ -25,6 +25,8 @@ http.createServer(function (request, response) {
 			});
 			return;
 		}
+		response.writeHead(404);
+		response.end('Page Not Found');
 		console.log(exists ? lookup + " is there" : lookup + " doesn't exist");
 	});
 }).listen(8080);
